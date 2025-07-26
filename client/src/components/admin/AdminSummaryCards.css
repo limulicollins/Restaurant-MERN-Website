@@ -1,0 +1,48 @@
+.summary-cards {
+  display: flex;
+  gap: 80px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  background: #1C2526;
+  border-radius: 12px;
+  padding: 20px;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+}
+
+.summary-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-content h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.summary-content p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.icon-box {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.summary-icon {
+  font-size: 28px;
+}
