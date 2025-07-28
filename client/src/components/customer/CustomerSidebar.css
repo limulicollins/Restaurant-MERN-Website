@@ -1,0 +1,56 @@
+.customer-sidebar {
+  width: 300px;
+  background-color: #1C2526;
+  height: 100vh;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+.sidebar-logo {
+  width: 250px;
+  height: 100px;
+  margin: 0 auto 30px;
+  display: block;
+  object-fit: contain;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  gap: 10px;
+  transition: background 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar-item:hover {
+  background-color: #292943;
+}
+
+.dropdown-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.sidebar-submenu {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.sidebar-submenu span {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sidebar-submenu span:hover {
+  text-decoration: underline;
+}

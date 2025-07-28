@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AdminTopBar.css';
+import './CustomerTopBar.css';
 import { FaBell, FaCommentDots, FaGift } from 'react-icons/fa';
 import profileImg from '../../assets/user.jpg';
 import { toast } from 'react-toastify';
 
 
-const AdminTopbar = () => {
+const CustomerTopbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef();
   const navigate = useNavigate();
@@ -29,8 +29,8 @@ const AdminTopbar = () => {
   };
 
   return (
-    <div className="admin-topbar">
-      <h1 className="topbar-title">Welcome to Admin Dashboard</h1>
+    <div className="customer-topbar">
+      <h1 className="topbar-title">Welcome to Fork Yeah!</h1>
 
       <div className="topbar-right">
         <div className="topbar-icons">
@@ -73,4 +73,4 @@ const AdminTopbar = () => {
   );
 };
 
-export default AdminTopbar;
+export default CustomerTopbar;
