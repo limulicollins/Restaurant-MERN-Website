@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './AdminSidebar.css';
-import { FaChartBar, FaBoxOpen, FaUsers, FaUtensils, FaTachometerAlt, FaChevronDown } from 'react-icons/fa';
+import { FaChartBar, FaBoxOpen, FaUsers, FaUtensils, FaTachometerAlt, FaChevronRight } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
 
 const AdminSidebar = () => {
@@ -22,7 +22,7 @@ const AdminSidebar = () => {
       <div className="sidebar-item" onClick={() => toggleMenu('analytics')}>
         <FaChartBar />
         <span>Analytics</span>
-        <FaChevronDown className={`dropdown-icon ${openMenu === 'analytics' ? 'open' : ''}`} />
+        <FaChevronRight className={`dropdown-icon ${openMenu === 'analytics' ? 'open' : ''}`} />
       </div>
       {openMenu === 'analytics' && (
         <div className="sidebar-submenu">
@@ -36,7 +36,7 @@ const AdminSidebar = () => {
       <div className="sidebar-item" onClick={() => toggleMenu('orders')}>
         <FaBoxOpen />
         <span>Orders</span>
-        <FaChevronDown className={`dropdown-icon ${openMenu === 'orders' ? 'open' : ''}`} />
+        <FaChevronRight className={`dropdown-icon ${openMenu === 'orders' ? 'open' : ''}`} />
       </div>
       {openMenu === 'orders' && (
         <div className="sidebar-submenu">
@@ -50,7 +50,7 @@ const AdminSidebar = () => {
       <div className="sidebar-item" onClick={() => toggleMenu('customers')}>
         <FaUsers />
         <span>Customers</span>
-        <FaChevronDown className={`dropdown-icon ${openMenu === 'customers' ? 'open' : ''}`} />
+        <FaChevronRight className={`dropdown-icon ${openMenu === 'customers' ? 'open' : ''}`} />
       </div>
       {openMenu === 'customers' && (
         <div className="sidebar-submenu">
@@ -62,7 +62,7 @@ const AdminSidebar = () => {
       <div className="sidebar-item" onClick={() => toggleMenu('menus')}>
         <FaUtensils />
         <span>Menus</span>
-        <FaChevronDown className={`dropdown-icon ${openMenu === 'menus' ? 'open' : ''}`} />
+        <FaChevronRight className={`dropdown-icon ${openMenu === 'menus' ? 'open' : ''}`} />
       </div>
       {openMenu === 'menus' && (
         <div className="sidebar-submenu">

@@ -3,12 +3,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -50,15 +52,16 @@ const Login = () => {
       <h2>Login</h2>
 
       <div className='input-box'>
+        <FontAwesomeIcon icon={faEnvelope} className="input-icon-left" />
         <input name="email" type="email" value={form.email} onChange={handleChange} required/>
         <label htmlFor="email">Email:</label>
-        <FontAwesomeIcon icon={faEnvelope} className="input-icon" />
       </div>
 
       <div className='input-box'>
-        <input name="password" type="password" value={form.password} onChange={handleChange} required/>
+        <FontAwesomeIcon icon={faLock} className="input-icon-left" />
+        <input name="password" type={showPassword ? 'text' : 'password'} value={form.password} onChange={handleChange} required/>
         <label htmlFor="password">Password:</label>
-        <FontAwesomeIcon icon={faLock} className="input-icon" />
+        <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} className="input-icon-right cursor-pointer" onClick={() => setShowPassword(!showPassword)} title={showPassword ? "Hide password" : "Show password"}/>
       </div>
 
       <div className='remember-forgot'>
@@ -72,7 +75,7 @@ const Login = () => {
 
       <div className='register-link'>
         <span>Don't have an account? </span>
-        <a href="/register">Register</a>
+        <a href="/Register">Register</a>
       </div>
 
       {error && <p className="error-text">{error}</p>}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CustomerSidebar.css';
-import { FaHome, FaUtensils, FaClipboardList, FaShoppingCart, FaQuestionCircle, FaChevronDown} from 'react-icons/fa';
+import { FaHome, FaUtensils, FaClipboardList, FaShoppingCart, FaQuestionCircle, FaChevronRight} from 'react-icons/fa';
 import logo from '../../assets/logo.png';
 
 const AdminSidebar = () => {
@@ -22,7 +22,7 @@ const AdminSidebar = () => {
       <div className="sidebar-item" onClick={() => toggleMenu('analytics')}>
         <FaUtensils />
         <span>Menu</span>
-        <FaChevronDown className={`dropdown-icon ${openMenu === 'analytics' ? 'open' : ''}`} />
+        <FaChevronRight className={`dropdown-icon ${openMenu === 'analytics' ? 'open' : ''}`} />
       </div>
       {openMenu === 'analytics' && (
         <div className="sidebar-submenu">
@@ -36,7 +36,7 @@ const AdminSidebar = () => {
       <div className="sidebar-item" onClick={() => toggleMenu('orders')}>
         <FaClipboardList />
         <span>Orders</span>
-        <FaChevronDown className={`dropdown-icon ${openMenu === 'orders' ? 'open' : ''}`} />
+        <FaChevronRight className={`dropdown-icon ${openMenu === 'orders' ? 'open' : ''}`} />
       </div>
       {openMenu === 'orders' && (
         <div className="sidebar-submenu">

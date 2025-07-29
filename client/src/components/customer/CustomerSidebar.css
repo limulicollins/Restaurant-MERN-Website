@@ -47,8 +47,17 @@
 }
 
 .sidebar-submenu span {
+  color: #fff;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(90deg);
 }
 
 .sidebar-submenu span:hover {
